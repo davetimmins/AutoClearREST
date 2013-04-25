@@ -1,0 +1,25 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Clear REST Cache</Name>
+  <AddInID>{ff5bd590-4948-45ea-9b89-158048d120ce}</AddInID>
+  <Description>Shortcut for clearing the ArcGIS Server REST cache. Only valid for v10 or higher of ArcGIS Server.</Description>
+  <Version>1.0.1</Version>
+  <Image>Images\ClearCache.png</Image>
+  <Author>Dave Timmins</Author>
+  <Company>Eagle Technology</Company>
+  <Date>22/12/2010</Date>
+  <Targets>
+    <Target name="Desktop" version="10.0" />
+  </Targets>
+  <AddIn language="CLR" library="ClearCache.dll" namespace="ClearCache">
+    <ArcCatalog>      
+      <Commands>
+        <Button id="Eagle_Technology_ClearCache_ClearCommand" class="ClearCommand" message="" caption="Clear REST Cache" tip="Clear the ArcGIS Server REST Cache" category="Add-In Controls" image="Images\ClearCommand.png" />
+      </Commands>
+      <DockableWindows>
+        <DockableWindow id="Eagle_Technology_ClearCache_ClearUI" class="ClearUI+AddinImpl" caption="Clear REST Cache" image="Images\ClearUI.png">
+          <InitialPlacement height="300" width="500" state="unpinned" position="right" />
+        </DockableWindow>
+      </DockableWindows>
+    </ArcCatalog>    
+  </AddIn>
+</ESRI.Configuration>
